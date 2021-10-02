@@ -9,7 +9,7 @@ import thunk from 'redux-thunk'
 
 import appReducer from './reducers/appReducer.js'
 
-const BACKEND = 'http://localhost:3000/'
+const BACKEND = 'http://localhost:3001'
 const store = createStore(appReducer, applyMiddleware(thunk))
 
 ReactDOM.render(

@@ -1,6 +1,7 @@
 import React from 'react'
-// import {connect} from 'react-redux'
+import {connect} from 'react-redux'
 import fetchUsers from '../actions/fetchUsers'
+
 class FetchUsers extends React.Component {
   
   getUsers = () => {
@@ -19,4 +20,10 @@ class FetchUsers extends React.Component {
   }
 }
 
-export default FetchUsers
+const mapDispatchToProps = dispatch => {
+  return {
+    fetchUsers: () => dispatch(fetchUsers())
+  }
+}
+
+export default connect(null, mapDispatchToProps)(FetchUsers)

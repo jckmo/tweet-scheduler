@@ -1,13 +1,11 @@
-import {BACKEND} from '../index'
+// import {BACKEND} from '../index.js'
 
 const fetchUsers = () => {
   return dispatch => {
-    fetch(`${BACKEND}/users`)
+    fetch(`http://localhost:3001/users`)
     .then(response => response.json())
     .then(jsonResponse => {
-
-      // dispatch({type: 'LOGIN', currentUser: jsonResponse.id})
-      console.log(jsonResponse)
+      dispatch({type: 'SAVE_USER', user: jsonResponse})
     })
   }
 }
