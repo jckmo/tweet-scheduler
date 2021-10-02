@@ -9,6 +9,7 @@ import thunk from 'redux-thunk'
 
 import appReducer from './reducers/appReducer.js'
 
+const BACKEND = 'http://localhost:3000/'
 const store = createStore(appReducer, applyMiddleware(thunk))
 
 ReactDOM.render(
@@ -19,3 +20,5 @@ ReactDOM.render(
   </Provider>
   ,document.getElementById('root')
 );
+
+export {BACKEND}

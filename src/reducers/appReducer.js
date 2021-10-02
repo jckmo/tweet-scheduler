@@ -1,4 +1,4 @@
-const appReducer = (state = {}, action) => {
+const appReducer = (state = {user: ''}, action) => {
   switch (action.type) {
 
   }
