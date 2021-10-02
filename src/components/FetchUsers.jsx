@@ -6,15 +6,13 @@ class FetchUsers extends React.Component {
   
   getUsers = () => {
     this.props.fetchUsers()
+    console.log(this)
   }
 
   render() {
     return (
       <>
         <button onClick={this.getUsers}>Get Users</button>
-        <div>
-  
-        </div>
       </>
     )
   }
@@ -26,4 +24,10 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-export default connect(null, mapDispatchToProps)(FetchUsers)
+const mapStateToProps = state => {
+  return {
+    user: state.user
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(FetchUsers)

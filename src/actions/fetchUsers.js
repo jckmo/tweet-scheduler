@@ -5,7 +5,7 @@ const fetchUsers = () => {
     fetch(`http://localhost:3001/users`)
     .then(response => response.json())
     .then(jsonResponse => {
-      dispatch({type: 'SAVE_USER', user: jsonResponse})
+      dispatch({type: 'SAVE_USER', user: jsonResponse[0].username})
     })
   }
 }

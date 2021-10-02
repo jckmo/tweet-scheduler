@@ -1,8 +1,10 @@
 import './stylesheets/App.css';
 import React from 'react'
-// import { connect } from 'react-redux';
+import { connect } from 'react-redux';
 
 import FetchUsers from './components/FetchUsers.jsx'
+
+import fetchUsers from './actions/fetchUsers.js'
 
 class App extends React.Component {
   render() {
