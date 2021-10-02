@@ -1,0 +1,15 @@
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.App {
+  background-color: aquamarine;
+  width: 90%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
