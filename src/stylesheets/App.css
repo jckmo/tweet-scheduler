@@ -1,41 +1,54 @@
+:root {
+  --lang-lav: #E3D8F1;
+  --quee-pin: #DABECA;
+  --rosy-bro: #BF8B85;
+  --camel: #AD8A64;
+  --blac-cor: #5D5F71;
+}
+
 #root {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: var(--blac-cor);
+
 }
 
 .App {
-  background-color: aquamarine;
+  background-color: var(--quee-pin);
   width: 90%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 45%;
-  border-radius: 8%/8%;
-  padding: 40% 0 40% 0;
+  margin-top: 14%;
+  border-radius: 8%/6%;
+  margin: 15% 0 40% 0;
 }
 
 .form-container {
   flex-wrap: wrap;
   display: flex;
-  /* align-items: center; */
-  /* justify-content: center; */
+  justify-content: center;
+}
+
+.tweet-field-title {
+  text-align: left;
+  position: relative;
+  padding: 0 0 0 10%;
+  width: 100%;
+  font-size: 15pt;
 }
 
 .tweet-field {
-  border-radius: 8%/20%;
+  border-radius: 4%/12%;
   width: 100%;
+  margin: 0 5% 0 5%;
 }
 
-.send-tweet {
-  width: 35%;
-}
-
-.hour-min-sec {
-  width: 100%;
-    display: flex;
-  align-items: center;
-  justify-content: center;
+.charCount {
+  font-size: 9pt;
+  margin: 0; 
+  margin-bottom: 10%;
 }
 
 .month-day-year {
@@ -43,4 +56,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.time {
+  margin: 7%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 10%;
+}
+
+.schedule-label {
+  width: 100%;
+  padding: 0 0 0 10%;
+  font-size: 15pt;
+}
+
+.send-tweet {
+  width: 35%;
 }

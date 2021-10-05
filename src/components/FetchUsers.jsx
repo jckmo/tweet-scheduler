@@ -4,74 +4,31 @@ import fetchUsers from '../actions/fetchUsers'
 
 class FetchUsers extends React.Component {
   
-  getUsers = () => {
-    this.props.fetchUsers()
+  sendTweet = () => {
     console.log(this)
   }
 
   render() {
     return (
       <div className='form-container'>
+        <label className='tweet-field-title'>enter tweet</label>
         <textarea className='tweet-field'rows='6'></textarea>
-        <div className='hour-min-sec'>
+        <p className='charCount'>{this.props.charCount}0/280</p>
+
+        <label className='schedule-label'>set schedule</label>
+        <div className='time'>
+          <label>time</label>
+          <input type='time' className='hour-min-sec'/>
+          <label>time zone</label>
           <select>
-            <option value='01'>01</option>
-            <option value='02'></option>
-            <option value='03'></option>
-            <option value='04'></option>
-            <option value='05'></option>
-            <option value='06'></option>
-            <option value='07'></option>
-            <option value='08'></option>
-            <option value='09'></option>
-            <option value='10'></option>
-            <option value='11'></option>
-            <option value='12'></option>
-            <option value=''></option>
-            <option value='05'></option>
-          </select>
-          <select>
-            <option value=''></option>
-            <option value=''></option>
-            <option value=''></option>
-            <option value=''></option>
-            <option value=''></option>
-          </select>
-          <select>
-            <option value=''></option>
-            <option value=''></option>
-            <option value=''></option>
-            <option value=''></option>
-            <option value=''></option>
+            <option value={null}></option>
+            <option value='00'>Eastern (Atlanta)</option>
           </select>
         </div>
 
-        <div className='month-day-year'>
-          <select>
-            <option value=''></option>
-            <option value=''></option>
-            <option value=''></option>
-            <option value=''></option>
-            <option value=''></option>
-          </select>
-          <select>
-            <option value=''></option>
-            <option value=''></option>
-            <option value=''></option>
-            <option value=''></option>
-            <option value=''></option>
-          </select>
-          <select>
-            <option value=''></option>
-            <option value=''></option>
-            <option value=''></option>
-            <option value=''></option>
-            <option value=''></option>
-          </select>
-        </div>
 
         {/* will become send button */}
-        <button className='send-tweet' onClick={this.getUsers}>Get Users</button>
+        <button className='send-tweet' onClick={this.sendTweet}>next</button>
       </div>
     )
   }
@@ -79,13 +36,13 @@ class FetchUsers extends React.Component {
 
 const mapDispatchToProps = dispatch => {
   return {
-    fetchUsers: () => dispatch(fetchUsers())
+    // fetchUsers: () => dispatch(fetchUsers())
   }
 }
 
 const mapStateToProps = state => {
   return {
-    user: state.user
+    // user: state.user
   }
 }
 
