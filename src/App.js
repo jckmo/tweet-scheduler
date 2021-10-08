@@ -2,31 +2,16 @@ import './stylesheets/App.css';
 import React from 'react'
 import { connect } from 'react-redux';
 
-import FetchUsers from './components/FetchUsers.jsx'
-
-import fetchUsers from './actions/fetchUsers.js'
+import Scheduler from './components/Scheduler.jsx'
 
 class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <FetchUsers/>
+        <Scheduler/>
       </div>
     );
   }
 }
 
-// const mapStateToProps = state => {
-//   return {
-//     user: state.user
-//   }
-// }
-
-// const mapDispatchToProps = dispatch => {
-//   return {
-//     fetchUsers: () => dispatch(fetchUsers)
-//   }
-// }
-
-// export default connect(mapStateToProps, mapDispatchToProps)(App);
 export default App;

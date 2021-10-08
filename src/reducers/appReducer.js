@@ -1,12 +1,10 @@
-const appReducer = (state = {user: ''}, action) => {
+const appReducer = (state = {currentTweet: ''}, action) => {
   switch (action.type) {
-    case 'SAVE_USER':
-      console.log(action.user)
+    case 'CHANGE_TWEET':
       return {
         ...state,
-        user: action.user
+        currentTweet: action.currentTweet
       }
-    // eslint-disable-next-line
     default:
       return state
   }
