@@ -1,8 +1,6 @@
 // https://github.com/auth0-blog/auth0-react-sample-classes
 // https://auth0.com/blog/complete-guide-to-react-user-authentication/
 
-
-
 import React from 'react'
 import {connect} from 'react-redux'
 import updateTweetState from '../actions/updateTweetState.js'
